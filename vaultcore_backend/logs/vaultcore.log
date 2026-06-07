@@ -1,0 +1,4663 @@
+2026-03-07 07:07:20 [restartedMain] INFO  com.vaultcore.VaultcoreApplication - Starting VaultcoreApplication using Java 21.0.10 with PID 18556 (D:\Project 1\vaultcore_backend\target\classes started by dhaga in D:\Project 1\vaultcore_backend)
+2026-03-07 07:07:20 [restartedMain] DEBUG com.vaultcore.VaultcoreApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-03-07 07:07:20 [restartedMain] INFO  com.vaultcore.VaultcoreApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-07 07:07:20 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-07 07:07:20 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-07 07:07:21 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-07 07:07:21 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 5 JPA repository interfaces.
+2026-03-07 07:07:22 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2026-03-07 07:07:22 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-07 07:07:22 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-03-07 07:07:22 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-07 07:07:22 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1404 ms
+2026-03-07 07:07:22 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-07 07:07:22 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-03-07 07:07:22 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-03-07 07:07:22 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-07 07:07:22 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - VaultCoreHikariCP - Starting...
+2026-03-07 07:07:22 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - VaultCoreHikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@638e9628
+2026-03-07 07:07:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - VaultCoreHikariCP - Start completed.
+2026-03-07 07:07:23 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-07 07:07:23 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-07 07:07:23 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table ledger 
+       modify column amount DECIMAL(19,4) CHECK (amount > 0) not null
+2026-03-07 07:07:24 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-07 07:07:24 [restartedMain] DEBUG c.v.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-07 07:07:24 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-07 07:07:25 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@75020ef2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76884866, org.springframework.security.web.context.SecurityContextHolderFilter@66c61c11, org.springframework.security.web.header.HeaderWriterFilter@4f980ef3, org.springframework.web.filter.CorsFilter@668fea97, org.springframework.security.web.authentication.logout.LogoutFilter@5238d4a5, com.vaultcore.security.JwtAuthenticationFilter@11b2010e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d4e7606, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14eec72, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16a63aa8, org.springframework.security.web.session.SessionManagementFilter@19e0e00f, org.springframework.security.web.access.ExceptionTranslationFilter@58b761ac, org.springframework.security.web.access.intercept.AuthorizationFilter@50c17a6c]
+2026-03-07 07:07:25 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-03-07 07:07:25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2026-03-07 07:07:25 [restartedMain] INFO  com.vaultcore.VaultcoreApplication - Started VaultcoreApplication in 5.324 seconds (process running for 5.796)
+2026-03-07 07:07:49 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-07 07:07:49 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-07 07:07:49 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2026-03-07 07:07:49 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/user/4
+2026-03-07 07:07:49 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/user/4
+2026-03-07 07:07:49 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/4
+2026-03-07 07:07:50 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:07:50 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/4
+2026-03-07 07:07:50 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:07:50 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:07:50 [task-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:07:51 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/4
+2026-03-07 07:07:51 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:07:51 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/4
+2026-03-07 07:07:51 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:07:51 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:07:51 [task-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:08:58 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/auth/register
+2026-03-07 07:08:58 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-03-07 07:08:58 [http-nio-8081-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-07 07:08:58 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/register
+2026-03-07 07:08:58 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:08:58 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-03-07 07:08:58 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at,email,password,phone,role,username) 
+    values
+        (?,?,?,?,?,?)
+2026-03-07 07:08:58 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        accounts
+        (account_number,account_type,balance,created_at,user_id) 
+    values
+        (?,?,?,?,?)
+2026-03-07 07:08:58 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        accounts
+        (account_number,account_type,balance,created_at,user_id) 
+    values
+        (?,?,?,?,?)
+2026-03-07 07:08:58 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:16 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/auth/login
+2026-03-07 07:09:16 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/login
+2026-03-07 07:09:16 [http-nio-8081-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-07 07:09:16 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/login
+2026-03-07 07:09:16 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:16 [http-nio-8081-exec-1] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Failed to authenticate since password does not match stored value
+2026-03-07 07:09:16 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:31 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/login
+2026-03-07 07:09:31 [http-nio-8081-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-07 07:09:31 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/login
+2026-03-07 07:09:31 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:31 [http-nio-8081-exec-2] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2026-03-07 07:09:32 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:32 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(a1_0.id) 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:09:32 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:33 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/user/6
+2026-03-07 07:09:33 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/user/6
+2026-03-07 07:09:33 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:09:33 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:33 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:09:33 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:09:33 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:33 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:33 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:09:33 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:33 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:09:33 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:09:33 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:33 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:37 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/others/6
+2026-03-07 07:09:37 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:09:37 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/others/6
+2026-03-07 07:09:37 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/6
+2026-03-07 07:09:37 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:37 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:37 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:09:37 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:09:37 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/6
+2026-03-07 07:09:37 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:37 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:37 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:09:37 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:37 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:09:37 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:37 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:37 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:09:37 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:37 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:09:37 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:37 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:37 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:37 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:37 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/6
+2026-03-07 07:09:37 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:37 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/6
+2026-03-07 07:09:37 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:09:37 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:37 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:37 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:37 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:37 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:38 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:09:39 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:39 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:09:39 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:09:39 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:39 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:39 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:09:39 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:39 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/VC6SAV78F2/history
+2026-03-07 07:09:39 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/VC6SAV78F2/history
+2026-03-07 07:09:39 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:39 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:09:39 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:09:39 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:39 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:39 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/VC6SAV78F2/history
+2026-03-07 07:09:39 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.account_ref,
+        l1_0.amount,
+        l1_0.balance_after,
+        l1_0.counterpart_account,
+        l1_0.created_at,
+        l1_0.description,
+        l1_0.entry_type,
+        l1_0.transaction_id,
+        l1_0.type 
+    from
+        ledger l1_0 
+    where
+        l1_0.account_ref=? 
+    order by
+        l1_0.created_at desc
+2026-03-07 07:09:39 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:41 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/stocks
+2026-03-07 07:09:41 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/stocks
+2026-03-07 07:09:41 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/stocks/AAPL
+2026-03-07 07:09:41 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/stocks/AAPL
+2026-03-07 07:09:41 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:09:41 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:09:41 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:41 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:41 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:09:41 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:41 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:09:41 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/stocks/MSFT
+2026-03-07 07:09:41 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:09:41 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/MSFT
+2026-03-07 07:09:41 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:41 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:41 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:09:41 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:41 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/MSFT
+2026-03-07 07:09:41 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:41 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:09:41 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:41 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:41 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:09:41 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:44 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/6
+2026-03-07 07:09:44 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:09:44 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:44 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:44 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/6
+2026-03-07 07:09:44 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:09:44 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:09:44 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:09:44 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:44 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:44 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:44 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:44 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:44 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:45 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:45 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:09:45 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/6
+2026-03-07 07:09:45 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:45 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:09:45 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:09:45 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/6
+2026-03-07 07:09:45 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:09:45 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:09:45 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:45 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:45 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:45 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:09:45 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:45 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:09:45 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:00 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/transfers
+2026-03-07 07:10:00 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/transfers
+2026-03-07 07:10:00 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:00 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/transfers
+2026-03-07 07:10:00 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_number=? for update
+2026-03-07 07:10:00 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:00 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_number=? for update
+2026-03-07 07:10:00 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:00 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        ledger
+        (account_ref,amount,balance_after,counterpart_account,created_at,description,entry_type,transaction_id,type) 
+    values
+        (?,?,?,?,?,?,?,?,?)
+2026-03-07 07:10:00 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        ledger
+        (account_ref,amount,balance_after,counterpart_account,created_at,description,entry_type,transaction_id,type) 
+    values
+        (?,?,?,?,?,?,?,?,?)
+2026-03-07 07:10:00 [http-nio-8081-exec-4] INFO  c.vaultcore.service.TransferService - ✅ Transfer complete: TXN-29787FE36E6C4E0FA652586C32BF25DB | $20 | VC6CHK78F2 → VC4CHK3EC7 | DEBIT balance: $480.00 | CREDIT balance: $480.00
+2026-03-07 07:10:00 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    update
+        accounts 
+    set
+        account_number=?,
+        account_type=?,
+        balance=?,
+        created_at=?,
+        user_id=? 
+    where
+        id=?
+2026-03-07 07:10:00 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    update
+        accounts 
+    set
+        account_number=?,
+        account_type=?,
+        balance=?,
+        created_at=?,
+        user_id=? 
+    where
+        id=?
+2026-03-07 07:10:00 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:00 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:10:00 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/6
+2026-03-07 07:10:00 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:00 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:00 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/6
+2026-03-07 07:10:00 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:10:00 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:00 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:10:00 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:00 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:00 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:10:00 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:00 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:00 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:00 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:08 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:10:08 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:08 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:10:08 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:10:08 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:08 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:08 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:10:08 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:08 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/VC6SAV78F2/history
+2026-03-07 07:10:08 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:10:08 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:08 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:10:08 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:08 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/VC6SAV78F2/history
+2026-03-07 07:10:08 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:08 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.account_ref,
+        l1_0.amount,
+        l1_0.balance_after,
+        l1_0.counterpart_account,
+        l1_0.created_at,
+        l1_0.description,
+        l1_0.entry_type,
+        l1_0.transaction_id,
+        l1_0.type 
+    from
+        ledger l1_0 
+    where
+        l1_0.account_ref=? 
+    order by
+        l1_0.created_at desc
+2026-03-07 07:10:08 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:11 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/VC6CHK78F2/history
+2026-03-07 07:10:11 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/VC6CHK78F2/history
+2026-03-07 07:10:11 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:11 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/VC6CHK78F2/history
+2026-03-07 07:10:11 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.account_ref,
+        l1_0.amount,
+        l1_0.balance_after,
+        l1_0.counterpart_account,
+        l1_0.created_at,
+        l1_0.description,
+        l1_0.entry_type,
+        l1_0.transaction_id,
+        l1_0.type 
+    from
+        ledger l1_0 
+    where
+        l1_0.account_ref=? 
+    order by
+        l1_0.created_at desc
+2026-03-07 07:10:11 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:23 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:10:23 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:10:23 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:23 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:23 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:10:23 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:10:23 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:23 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:10:23 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:23 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/MSFT
+2026-03-07 07:10:23 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:23 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:10:23 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:23 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/MSFT
+2026-03-07 07:10:23 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:23 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:10:23 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:23 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:10:23 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:23 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:25 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/stocks/GOOGL
+2026-03-07 07:10:25 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/GOOGL
+2026-03-07 07:10:25 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:25 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/GOOGL
+2026-03-07 07:10:25 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:30 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/GOOGL
+2026-03-07 07:10:30 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:30 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/GOOGL
+2026-03-07 07:10:30 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:32 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:10:32 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:32 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:10:32 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:10:32 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:32 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:32 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:10:32 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:32 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:10:32 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:10:32 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:32 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:36 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:10:36 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:10:36 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:36 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:36 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:10:36 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:10:36 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:36 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:10:36 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:36 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/MSFT
+2026-03-07 07:10:36 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:10:36 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:36 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:36 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/MSFT
+2026-03-07 07:10:36 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:36 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:10:36 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:36 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:10:36 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:36 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:38 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:10:38 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:38 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:10:38 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:10:38 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:38 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:38 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:10:38 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:38 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:10:38 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:10:38 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:38 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:40 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:10:40 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/6
+2026-03-07 07:10:40 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:40 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:40 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:10:40 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/6
+2026-03-07 07:10:40 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:10:40 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:10:40 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:40 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:40 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:40 [task-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:40 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:40 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/6
+2026-03-07 07:10:40 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:40 [task-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:40 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:40 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/6
+2026-03-07 07:10:40 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:10:40 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/6
+2026-03-07 07:10:40 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:10:40 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/6
+2026-03-07 07:10:40 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:40 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:10:40 [task-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:10:40 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:40 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:40 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:40 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:10:40 [task-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:02 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/register
+2026-03-07 07:14:02 [http-nio-8081-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-07 07:14:02 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/register
+2026-03-07 07:14:02 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:02 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-03-07 07:14:03 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (created_at,email,password,phone,role,username) 
+    values
+        (?,?,?,?,?,?)
+2026-03-07 07:14:03 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        accounts
+        (account_number,account_type,balance,created_at,user_id) 
+    values
+        (?,?,?,?,?)
+2026-03-07 07:14:03 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        accounts
+        (account_number,account_type,balance,created_at,user_id) 
+    values
+        (?,?,?,?,?)
+2026-03-07 07:14:03 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:23 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/auth/login
+2026-03-07 07:14:23 [http-nio-8081-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-03-07 07:14:23 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/auth/login
+2026-03-07 07:14:23 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:23 [http-nio-8081-exec-3] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2026-03-07 07:14:23 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:23 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        count(a1_0.id) 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:23 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:24 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/user/7
+2026-03-07 07:14:24 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/user/7
+2026-03-07 07:14:24 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:24 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:24 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:24 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:24 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:24 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:24 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:24 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:24 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:24 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:24 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:24 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:28 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/others/7
+2026-03-07 07:14:28 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/others/7
+2026-03-07 07:14:28 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:28 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/7
+2026-03-07 07:14:28 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:28 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:28 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:28 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/7
+2026-03-07 07:14:28 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:14:28 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:28 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:28 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:28 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:28 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/7
+2026-03-07 07:14:28 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:28 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:28 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/7
+2026-03-07 07:14:28 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:14:28 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:28 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:28 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:29 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:29 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:29 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:29 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:29 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:29 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:29 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:29 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:29 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:29 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/VC7SAVDD4B/history
+2026-03-07 07:14:29 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:29 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/VC7SAVDD4B/history
+2026-03-07 07:14:29 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:29 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:29 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:29 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/VC7SAVDD4B/history
+2026-03-07 07:14:29 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.account_ref,
+        l1_0.amount,
+        l1_0.balance_after,
+        l1_0.counterpart_account,
+        l1_0.created_at,
+        l1_0.description,
+        l1_0.entry_type,
+        l1_0.transaction_id,
+        l1_0.type 
+    from
+        ledger l1_0 
+    where
+        l1_0.account_ref=? 
+    order by
+        l1_0.created_at desc
+2026-03-07 07:14:29 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:31 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:14:31 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:14:31 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:31 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:31 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:14:31 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:14:31 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:31 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:14:31 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:31 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/MSFT
+2026-03-07 07:14:31 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:14:31 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:31 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:31 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/MSFT
+2026-03-07 07:14:31 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:31 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:14:31 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:31 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:14:31 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:31 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:33 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:33 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:33 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:33 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:33 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:33 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:33 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:33 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:33 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:33 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:33 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:33 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:35 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:35 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/7
+2026-03-07 07:14:35 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:35 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:35 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:35 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/7
+2026-03-07 07:14:35 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:14:35 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:35 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:35 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:35 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:35 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/7
+2026-03-07 07:14:35 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:35 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:35 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/7
+2026-03-07 07:14:35 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:35 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:14:35 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:35 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:55 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/transfers
+2026-03-07 07:14:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:55 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/transfers
+2026-03-07 07:14:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_number=? for update
+2026-03-07 07:14:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.account_number=? for update
+2026-03-07 07:14:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        ledger
+        (account_ref,amount,balance_after,counterpart_account,created_at,description,entry_type,transaction_id,type) 
+    values
+        (?,?,?,?,?,?,?,?,?)
+2026-03-07 07:14:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        ledger
+        (account_ref,amount,balance_after,counterpart_account,created_at,description,entry_type,transaction_id,type) 
+    values
+        (?,?,?,?,?,?,?,?,?)
+2026-03-07 07:14:55 [http-nio-8081-exec-4] INFO  c.vaultcore.service.TransferService - ✅ Transfer complete: TXN-6DBFAE60CF784736BE5EBBC4E1144E63 | $20 | VC7CHKDD4B → VC5CHK77D9 | DEBIT balance: $480.00 | CREDIT balance: $540.00
+2026-03-07 07:14:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    update
+        accounts 
+    set
+        account_number=?,
+        account_type=?,
+        balance=?,
+        created_at=?,
+        user_id=? 
+    where
+        id=?
+2026-03-07 07:14:55 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    update
+        accounts 
+    set
+        account_number=?,
+        account_type=?,
+        balance=?,
+        created_at=?,
+        user_id=? 
+    where
+        id=?
+2026-03-07 07:14:55 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:55 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:55 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/7
+2026-03-07 07:14:55 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:55 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:55 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/7
+2026-03-07 07:14:55 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:55 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:14:55 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:55 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:55 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:55 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:55 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:55 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:55 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:55 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:55 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:59 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:59 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:59 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:59 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:59 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:59 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:59 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:14:59 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:59 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/VC7SAVDD4B/history
+2026-03-07 07:14:59 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:14:59 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:14:59 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:14:59 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:14:59 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/VC7SAVDD4B/history
+2026-03-07 07:14:59 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:14:59 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.account_ref,
+        l1_0.amount,
+        l1_0.balance_after,
+        l1_0.counterpart_account,
+        l1_0.created_at,
+        l1_0.description,
+        l1_0.entry_type,
+        l1_0.transaction_id,
+        l1_0.type 
+    from
+        ledger l1_0 
+    where
+        l1_0.account_ref=? 
+    order by
+        l1_0.created_at desc
+2026-03-07 07:14:59 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:01 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing OPTIONS /api/accounts/VC7CHKDD4B/history
+2026-03-07 07:15:01 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/VC7CHKDD4B/history
+2026-03-07 07:15:01 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:01 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/VC7CHKDD4B/history
+2026-03-07 07:15:01 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.account_ref,
+        l1_0.amount,
+        l1_0.balance_after,
+        l1_0.counterpart_account,
+        l1_0.created_at,
+        l1_0.description,
+        l1_0.entry_type,
+        l1_0.transaction_id,
+        l1_0.type 
+    from
+        ledger l1_0 
+    where
+        l1_0.account_ref=? 
+    order by
+        l1_0.created_at desc
+2026-03-07 07:15:01 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:17 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:15:17 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:15:17 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:17 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:17 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:15:17 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:15:17 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:17 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:15:17 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:17 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/MSFT
+2026-03-07 07:15:17 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:15:17 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:17 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:17 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/MSFT
+2026-03-07 07:15:17 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:17 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:15:17 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:17 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:15:17 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:17 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:21 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:15:21 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:21 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:15:21 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:15:21 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:21 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:21 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:15:21 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:21 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/VC7SAVDD4B/history
+2026-03-07 07:15:21 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:15:21 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:21 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:15:21 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:21 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/VC7SAVDD4B/history
+2026-03-07 07:15:21 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:21 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        l1_0.id,
+        l1_0.account_ref,
+        l1_0.amount,
+        l1_0.balance_after,
+        l1_0.counterpart_account,
+        l1_0.created_at,
+        l1_0.description,
+        l1_0.entry_type,
+        l1_0.transaction_id,
+        l1_0.type 
+    from
+        ledger l1_0 
+    where
+        l1_0.account_ref=? 
+    order by
+        l1_0.created_at desc
+2026-03-07 07:15:21 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:23 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:15:23 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/7
+2026-03-07 07:15:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:23 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:23 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:15:23 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/7
+2026-03-07 07:15:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:15:23 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:15:23 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:23 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/others/7
+2026-03-07 07:15:23 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:23 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:23 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:15:23 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/others/7
+2026-03-07 07:15:23 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id<>?
+2026-03-07 07:15:23 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:23 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:23 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:24 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:15:24 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:24 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:15:24 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:15:24 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:24 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:24 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:15:24 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:24 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:15:24 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:15:24 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:24 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:26 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:15:26 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:15:26 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:26 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:26 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:15:26 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:15:26 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:26 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks
+2026-03-07 07:15:26 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:26 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/MSFT
+2026-03-07 07:15:26 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks
+2026-03-07 07:15:26 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:26 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:26 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/MSFT
+2026-03-07 07:15:26 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:26 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/stocks/AAPL
+2026-03-07 07:15:26 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:26 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/stocks/AAPL
+2026-03-07 07:15:26 [task-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:26 [task-10] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:27 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:15:27 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:27 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:15:27 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:15:27 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:27 [task-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:15:27 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/accounts/user/7
+2026-03-07 07:15:27 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-07 07:15:27 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/accounts/user/7
+2026-03-07 07:15:27 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.account_number,
+        a1_0.account_type,
+        a1_0.balance,
+        a1_0.created_at,
+        a1_0.user_id 
+    from
+        accounts a1_0 
+    where
+        a1_0.user_id=?
+2026-03-07 07:15:27 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-07 07:15:27 [task-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_log
+        (action,created_at,ip_address,method,parameters,result,username) 
+    values
+        (?,?,?,?,?,?,?)
+2026-03-07 07:18:40 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-07 07:18:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - VaultCoreHikariCP - Shutdown initiated...
+2026-03-07 07:18:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - VaultCoreHikariCP - Shutdown completed.
